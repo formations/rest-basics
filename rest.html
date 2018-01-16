@@ -53,11 +53,7 @@ h2:before {
           Choose your way to create the button, use <a href="https://about.twitter.com/resources/buttons">the configurer</a> or create it directly with the help of the <a href="https://dev.twitter.com/web/tweet-button">documentation</a>. The button must be of large size and do not display followers count.
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Put result here (replace panel)
-            </div>
-          </div>
+          <a href="https://twitter.com/newsCUI" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @newsCUI</a>
         </div>
       </div>
       <div class="row">
@@ -68,11 +64,7 @@ h2:before {
           Change the code to follow your own account. If you don't have a Twitter account, select an account of your choice.
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Put result here (replace panel)
-            </div>
-          </div>
+          <a href="https://twitter.com/nicolas_frankel" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @nicolas_frankel</a>
         </div>
       </div>
       <div class="row">
@@ -83,11 +75,7 @@ h2:before {
           Using the <a href="https://dev.twitter.com/web/follow-button#configure-your-follow-button">available parameters</a>, change the code to display the number of followers.
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Put result here (replace panel)
-            </div>
-          </div>
+          <a href="https://twitter.com/nicolas_frankel" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @nicolas_frankel</a>
         </div>
       </div>
       <div class="row">
@@ -106,11 +94,7 @@ h2:before {
           Choose your way to create the button, use the <a href="https://about.twitter.com/resources/buttons">button configurer</a> or create it directly with the help of the <a href="https://dev.twitter.com/web/tweet-button">documentation</a>. The button must be of large size and have message "Hello".
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Put result here (replace panel)
-            </div>
-          </div>
+          <a href="https://twitter.com/intent/tweet?screen_name=newsCUI&text=Hello" class="twitter-mention-button" data-size="large">Tweet to @newsCUI</a>
         </div>
       </div>
       <div class="row">
@@ -140,11 +124,7 @@ h2:before {
           Create it directly with the help of the <a href="https://dev.twitter.com/web/embedded-timelines">documentation</a>. Use  <code>data-widget-id='561623387433230336'</code>.
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Put result here (replace panel)
-            </div>
-          </div>
+          <a class="twitter-timeline" href="https://twitter.com/newsCUI" data-widget-id="561623387433230336">Tweets by @newsCUI</a>
         </div>
       </div>
       <div class="row">
@@ -155,11 +135,7 @@ h2:before {
           Configure the timeline to display only two tweets.
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Put result here (replace panel)
-            </div>
-          </div>
+          <a class="twitter-timeline" href="https://twitter.com/newsCUI" data-widget-id="561623387433230336" data-tweet-limit="2">Tweets by @newsCUI</a>
         </div>
       </div>
       <h1>Calling the Twitter API</h1>
@@ -192,7 +168,7 @@ h2:before {
           <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> API Key
         </div>
         <div class="col-md-10">
-          <input type="text" class="form-control" id="apiKeyInput" placeholder="Put key here" />
+          <input type="text" class="form-control" id="apiKeyInput" value="9DRVn2JfIAaGSHE5iCYoVQ" />
         </div>
       </div>
       <div class="row">
@@ -200,7 +176,7 @@ h2:before {
           <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> API Secret
         </div>
         <div class="col-md-10">
-          <input type="text" class="form-control" id="apiSecretInput" placeholder="Put secret here" />
+          <input type="text" class="form-control" id="apiSecretInput" value="5xTHtgVdkZ3VgFFMpt9UtVnprfqjZa43S5VTv0BD0" />
         </div>
       </div>
       <div class="row">
@@ -456,5 +432,130 @@ h2:before {
         </div>
       </div>
     </div>
-
+    <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+    <script>
+      window.onload = function() {
+        function tokenInput() {
+          return document.getElementById("tokenInput");
+        }
+        function tweetTableBody() {
+          var timelineTbl = document.getElementById("timelineTbl");
+          return timelineTbl.tBodies[0];
+        }
+        function clearTweetTable() {
+          var tBody = tweetTableBody()
+          while (tBody.firstChild) {
+            tBody.removeChild(tBody.firstChild);
+          }
+        }
+        function userProfile(tweet) {
+          if (tweet.retweeted_status === undefined) {
+            return tweet.user;
+          } else {
+            return tweet.retweeted_status.user;
+          }
+        }
+        function expandEntitiesUrl(urls, text, keepText) {
+		  if (urls) {
+		    for (var i in urls) {
+		      var urlEntity = urls[i];
+		      var start = urlEntity.indices[0];
+		      var end = urlEntity.indices[1];
+		      var startStr = text.substring(0, start);
+		      var str = keepText ? text.substring(start, end) : urlEntity.display_url;
+		      var endStr = text.substring(end, text.length);
+		      var result = startStr + "<a href='" + urlEntity.expanded_url + "'";
+		      if (!keepText) {
+		        result += " class='btn btn-default btn-xs'";
+		      }
+		      return result + ">" + str + "</a>" + endStr;
+		    }
+		  }
+		  return text;
+        }
+        function appendUserPicTo(tr, tweet) {
+          var pic = document.createElement("td");
+          var imgUrl = userProfile(tweet).profile_image_url;
+          pic.innerHTML = "<img src='" + imgUrl + "' class='img-rounded'>";
+          tr.appendChild(pic);
+        }
+        function appendUserNameTo(tr, tweet) {
+          var name = document.createElement("td");
+          var user = userProfile(tweet);
+          name.innerHTML = '<strong>' + expandEntitiesUrl(user.entities.url.urls, user.name, true) + '</strong>';
+          tr.appendChild(name);
+        }
+        function appendUserScreenNameTo(tr, tweet) {
+          var screenName = document.createElement("td");
+          screenName.innerHTML = "@" + userProfile(tweet).screen_name;
+          tr.appendChild(screenName);
+        }
+        function appendText(tr, tweet) {
+		  var textCell = document.createElement("td");
+		  textCell.innerHTML = expandEntitiesUrl(tweet.entities.urls, tweet.text, false);
+		  tr.appendChild(textCell);
+        }
+        function appendDate(tr, tweet) {
+		  var date = document.createElement("td");
+		  date.innerHTML = tweet.created_at;
+		  tr.appendChild(date);
+        }
+        function appendMedias(tr, tweet) {
+		  var mediaCell = document.createElement("td");
+		  if (tweet.entities.media) {
+		    for (var i in tweet.entities.media) {
+		      var mediaEntity = tweet.entities.media[i];
+		      var img = document.createElement("img");
+		      img.src = mediaEntity.media_url + ':small';
+		      mediaCell.appendChild(img);
+		    }
+		  }
+		  tr.appendChild(mediaCell);
+        }
+        function appendAll(tr, tweet) {
+		  var all = document.createElement("td");
+		  all.innerHTML = JSON.stringify(tweet);
+		  tr.appendChild(all);
+        }
+        var tokenBtn = document.getElementById("tokenBtn");
+        tokenBtn.onclick = function() {
+          var consumerKey = document.getElementById("apiKeyInput").value;
+          var consumerApi = document.getElementById("apiSecretInput").value;
+          var authorization = btoa(consumerKey + ':' + consumerApi);
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://api.twitter.com/oauth2/token", false);
+          xhr.setRequestHeader("Authorization", "Basic " + authorization);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+          xhr.send("grant_type=client_credentials");
+          if (xhr.status === 200) {
+            var json = JSON.parse(xhr.responseText);
+            tokenInput().value = json.access_token;
+          }
+        }
+        var timelineBtn = document.getElementById("timelineBtn");
+        timelineBtn.onclick = function() {
+          var screenNameInput = document.getElementById("screenNameInput");
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + screenNameInput.value, false);
+          xhr.setRequestHeader("Authorization", "Bearer " + tokenInput().value);
+          xhr.send(null);
+          if (xhr.status === 200) {
+            clearTweetTable();
+            var json = JSON.parse(xhr.responseText);
+            for (var i in json) {
+              var tr = document.createElement("tr");
+              var tweet = json[i];
+              appendUserPicTo(tr, tweet);
+              appendUserNameTo(tr, tweet);
+              appendUserScreenNameTo(tr, tweet);
+              appendText(tr, tweet);
+              appendDate(tr, tweet);
+              appendMedias(tr, tweet);
+              // appendAll(tr, tweet);
+              tweetTableBody().appendChild(tr);
+            }
+          }
+        }
+      }
+    </script>
     
