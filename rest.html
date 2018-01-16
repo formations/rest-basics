@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Social Workshop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+body {
+  counter-reset: h1;
+}
+h1 {
+  counter-increment: h1;
+  counter-reset: h2;
+}
+h2:before {
+  counter-increment: h2;
+  content: counter(h1) '.' counter(h2) '. ';
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Going further</h1>
+      </div>
+      <h2>Simple out-of-the-box widgets</h2>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Creating widgets</div>
+        <div class="panel-body">
+          There are two ways to create Twitter buttons:
+          <ol>
+            <li>Using the <a href="https://about.twitter.com/resources/buttons">online button configurer</a>
+            <li>Code it with the referent documentation
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Follow button
+        </div>
+        <div class="col-md-10">
+          Create a Twitter button to follow <a href="https://twitter.com/newsCUI">@newsCUI</a>.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-5">
+          Choose your way to create the button, use <a href="https://about.twitter.com/resources/buttons">the configurer</a> or create it directly with the help of the <a href="https://dev.twitter.com/web/tweet-button">documentation</a>. The button must be of large size and do not display followers count.
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Put result here (replace panel)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-5">
+          Change the code to follow your own account. If you don't have a Twitter account, select an account of your choice.
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Put result here (replace panel)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-5">
+          Using the <a href="https://dev.twitter.com/web/follow-button#configure-your-follow-button">available parameters</a>, change the code to display the number of followers.
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Put result here (replace panel)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Mention button
+        </div>
+        <div class="col-md-10">
+          Create a Twitter button to mention <a href="https://twitter.com/newsCUI">@newsCUI</a>.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-5">
+          Choose your way to create the button, use the <a href="https://about.twitter.com/resources/buttons">button configurer</a> or create it directly with the help of the <a href="https://dev.twitter.com/web/tweet-button">documentation</a>. The button must be of large size and have message "Hello".
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Put result here (replace panel)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Refactor code
+        </div>
+        <div class="col-md-1">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Check the code used. Rewrite it so the JavaScript is referenced and called only once in the page.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Timeline widget
+        </div>
+         <div class="col-md-10">
+          Create a Twitter timeline to display <a href="https://twitter.com/newsCUI">@newsCUI</a>.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-5">
+          Create it directly with the help of the <a href="https://dev.twitter.com/web/embedded-timelines">documentation</a>. Use  <code>data-widget-id='561623387433230336'</code>.
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Put result here (replace panel)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-5">
+          Configure the timeline to display only two tweets.
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Put result here (replace panel)
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>Calling the Twitter API</h1>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Handling same origin in XMLHttpRequest</div>
+        <div class="panel-body">
+          By default, browser security prevents sending <code>XMLHttpRequest</code> to domains that are different from the one the HTML page is hosted on. This is called <span>Same-origin</span> policy. It can be configured on the server-side but the file needs to be hosted on a server. For simple files, it can be disabled on the browser side for development purposes, but is then dependent on the browser. Please check <a href="https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally" target="_blank">instructions</a> for your browser.
+        </div>
+      </div>
+      <h2>Authenticating</h2>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Create an application
+        </div>
+        <div class="col-md-10">
+          <p>In order to use the Twitter API, one has to get authenticated. There are two types of authentication, one where an account is authenticated and one where app is authenticated. The latter is easier to set up but has a lower call limit (enough for our needs). This requires <a href="https://apps.twitter.com/app/new">creating a new app</a>.
+          <p>Fill in the required fields, agree to the license agreement and click <button class="btn btn-default">Create your Twitter application</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Authentication details
+        </div>
+        <div class="col-md-10">
+          Once the API has been created, go to the <button class="btn btn-default">Keys and Access Token</button> tab. Copy the relevant fields in the form below. It is advised to put them as default values, since you'll probably need a couple of reloads to get everything working.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> API Key
+        </div>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="apiKeyInput" placeholder="Put key here" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> API Secret
+        </div>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="apiSecretInput" placeholder="Put secret here" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Get OAuth Token
+        </div>
+        <div class="col-md-10">
+          <span class="text-danger">Never ever send the API key/secret to execute GET methods in order to call API</span>, as ill-intentioned persons might read them and use them in a way you didn't intend to. Instead, Twitter require the use of a "bearer" token. Such token is returned by a <code>POST</code> call to the <a href="https://api.twitter.com/oauth2/token">OAuth Twitter endpoint</a>. Read the full-fledged <a href="https://dev.twitter.com/oauth/application-only">documentation</a>, the lines below are just a reminder.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Create a anonymous JavaScript function to embed all the next steps
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Concatenate the encoded consumer key, a colon character <code>:</code>, and the encoded consumer secret into a single string
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Base64 encode the string from the previous step (<span class="badge">2</span>). Use the native JavaScript <code>btoa()</code> function.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Create a new <span class="text-warning">synchronous</span> <code>XMLHttpRequest</code> object with:
+          <ol>
+            <li>HTTP method <code>POST</code>
+            <li>URL to call <code>https://api.twitter.com/oauth2/token</code>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Add a new HTTP Header to the <code>XMLHttpRequest</code> (<span class="badge">4</span>).
+          <ol>
+            <li>The key is <code>Authorization</code> 
+            <li>The value is the concatenation of <code>Basic </code> with the previous computation (<span class="badge">3</span>).
+          </ol>
+          Use the standard <code>XMLHttpRequest.setRequestHeader(key, value)</code> method.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Add another HTTP header to the <code>XMLHttpRequest</code> (<span class="badge">4</span>).
+          <ol>
+            <li>The key is <code>Content-Type</code>
+            <li>The value <code>application/x-www-form-urlencoded;charset=UTF-8</code>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Call the <code>send()</code> method on the <code>XMLHttpRequest</code> object (<span class="badge">4</span>) with the parameter <code>grant_type=client_credentials</code> (it's the content of the HTTP request)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Read the result from the <code>responseText</code> attribute of the <code>XMLHttpRequest</code> object (<span class="badge">4</span>)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Transform the result of the previous step (<span class="badge">8</span>) into a JSON object with <code>JSON.parse()</code>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          The token is accessible in the <code>access_token</code> attribute of the JSON object (<span class="badge">9</span>). Write its value into the <code>tokenInput</code> form field (<span class="badge">13</span>)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Finally, associate the function created (<span class="badge">1</span>) to the <code>onlick</code> event handler attribute of the <button class="btn btn-default"><span class="badge">12</span> OAuth</button> button so that the function is executed when it is clicked.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <button id="tokenBtn" class="btn btn-primary">
+              <span class="badge task"> </span> OAuth
+            </button>
+        </div>
+        <div class="col-md-8">
+          <div class="input-group">
+            <span class="task input-group-addon"> </span>
+            <input type="text" class="form-control" id="tokenInput" readonly />
+          </div>
+        </div>
+      </div>
+      <h2>Calling the API</h2>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Call API
+        </div>
+        <div class="col-md-10">
+          It's now possible to make authenticated calls. Let's use the <code>user_timeline</code> API to show the Twitter timeline of a specific user.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Create an anonymous function to embed all the next steps
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Read the value of the screen name field (<span class="badge">11</span>) into a <code>screenNameInput</code> variable
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Create a new <span class="text-warning">synchronous</span> <code>XMLHttpRequest</code> object with:
+          <ol>
+            <li>HTTP method <code>GET</code>
+            <li>URL to call <code>https://api.twitter.com/1.1/statuses/user_timeline.json</code>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Slightly adapt the URL parameter of the <code>XMLHttpRequest</code> (<span class="badge">3</span>) to add a parameter with
+          <ol>
+            <li>The name <code>screen_name</code>
+            <li>The value <code>screenNameInput</code> (<span class="badge">2</span>)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Add an HTTP Header to the <code>XMLHttpRequest</code> object (<span class="badge">3</span>) with:
+          <ol>
+            <li>The key <code>Authentication</code>
+            <li>The value set to the concatenation of <code>Bearer </code> and the value of the OAuth token written in the <code>tokenInput</code> field
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">Call the <code>send()</code> method on the <code>XMLHttpRequest</code> object (<span class="badge">3</span>) with the parameter <code>null</code>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Read the result from the <code>responseText</code> attribute of the <code>XMLHttpRequest</code> object (<span class="badge">3</span>)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          Transform the result of the previous step (<span class="badge">7</span>) into a JSON object with <code>JSON.parse()</code>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+          With the result accessible as a JSON object (<span class="badge">8</span>), try displaying fields such as <code>tweet.text</code>, <code>tweet.user</code>, etc in the <code>timelineTbl</code> table at the bottom of the page (<span class="badge">13</span>). The whole structure of a tweet object is available <a href="https://dev.twitter.com/overview/api/tweets">online</a>.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+          <span class="badge task"> </span>
+        </div>
+        <div class="col-md-9">
+                    Finally, associate the function created (<span class="badge">1</span>) to the <code>onlick</code> event handler attribute of the <button class="btn btn-default"><span class="badge">12</span> OAuth</button> button so that the function is executed when it is clicked.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          <div class="form-group">
+            <label for="screenNameInput">Screen Name</label>
+            <div class="input-group">
+              <span class="task input-group-addon"> </span>
+              <div class="input-group-addon">@</div>
+              <input type="text" class="form-control" id="screenNameInput" value="newsCUI" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          <button id="timelineBtn" class="btn btn-primary">
+            <span class="badge task"> </span> Get Timeline
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table id="timelineTbl" class="table table-striped">
+            <thead>
+              <tr>
+                <th><span class="badge task"> </span></th>
+                <th>User Name</th>
+                <th>Screen Name</th>
+                <th>Text</th>
+                <th>Date created</th>
+                <th>Medias</th>
+            </thead>
+            <tbody />
+          </table>
+        </div>
+      </div>
+    </div>
+
+    
